@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.eryck.avalapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name=".Avaliacao.Avaliacao5"></activity>
+        <activity android:name=".Avaliacao.Avaliacao4" />
+        <activity android:name=".Avaliacao.Avaliacao3" />
+        <activity android:name=".Avaliacao.Avaliacao2" />
+        <activity android:name=".Jogos.Jogo5" />
+        <activity android:name=".Jogos.Jogo4" />
+        <activity android:name=".Jogos.Jogo3" />
+        <activity android:name=".Jogos.Jogo2" />
+        <activity android:name=".Activity.ResetSenha" />
+        <activity android:name=".Activity.Login">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activity.Cadastro" />
+        <activity
+            android:name=".Activity.Perfil"
+            android:label="@string/title_activity_perfil"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Avaliacao.Avaliacao" />
+        <activity
+            android:name=".Jogos.Jogo"
+            android:label="@string/title_activity_jogo"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

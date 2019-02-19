@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="1dp"
+    android:layout_marginTop="1dp"
+    android:layout_marginEnd="1dp"
+    android:layout_marginBottom="1dp"
+    android:background="@drawable/background"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    tools:context=".Activity.Cadastro">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imgPerfil"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="100dp"
+            android:layout_marginBottom="8dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/desc"
+            android:src="@drawable/logo"
+            />
+
+        <EditText
+            android:id="@+id/editNome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:hint="@string/nome"
+            android:inputType="textPersonName"
+            tools:ignore="Autofill" />
+
+        <EditText
+            android:id="@+id/editEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="8dp"
+            android:ems="10"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            tools:ignore="Autofill" />
+
+        <EditText
+            android:id="@+id/editTelefone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="8dp"
+            android:ems="10"
+            android:hint="@string/telefone"
+            android:inputType="phone"
+            tools:ignore="Autofill" />
+
+        <EditText
+            android:id="@+id/editCidade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="8dp"
+            android:ems="10"
+            android:hint="@string/cidade"
+            android:inputType="textPostalAddress"
+            tools:ignore="Autofill" />
+
+        <EditText
+            android:id="@+id/editEstado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="8dp"
+            android:ems="10"
+            android:hint="@string/estado"
+            android:inputType="textPostalAddress"
+            tools:ignore="Autofill" />
+
+        <EditText
+            android:id="@+id/editSenha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="8dp"
+            android:ems="10"
+            android:hint="Senha"
+            android:inputType="textPassword"
+            tools:ignore="Autofill" />
+
+        <EditText
+            android:id="@+id/editConfSenha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:ems="10"
+            android:hint="Confirme a Senha"
+            android:inputType="textPassword"
+            tools:ignore="Autofill" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="Adicione uma imagem de Perfil"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/imgAddPerfil"
+            android:layout_width="150dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/camera"
+            android:contentDescription="@string/desc"
+            android:scaleType="fitCenter" />
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnVoltar"
+                android:layout_width="150dp"
+                android:layout_height="45dp"
+                android:layout_gravity="left"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/botao"
+                android:shadowColor="#5C5C5C"
+                android:shadowDx="-5"
+                android:shadowDy="0"
+                android:shadowRadius="5"
+                android:text="@string/voltar"
+                android:textColor="#D3D6C9"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnCadastro"
+                android:layout_width="150dp"
+                android:layout_height="45dp"
+                android:layout_gravity="right"
+                android:layout_marginLeft="16dp"
+                android:background="@drawable/botao"
+                android:shadowColor="#5C5C5C"
+                android:shadowDx="-5"
+                android:shadowDy="0"
+                android:shadowRadius="5"
+                android:text="@string/cadastrar"
+                android:textColor="#D3D6C9"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

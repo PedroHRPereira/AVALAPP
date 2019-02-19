@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".Avaliacao.Avaliacao4">
+
+
+    <ImageView
+        android:id="@+id/imgPerfil"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/desc"
+        android:src="@drawable/jogo4"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toStartOf="@+id/txtTitulo"
+        app:layout_constraintHorizontal_bias="0.427"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="194dp"
+        android:layout_height="121dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="16dp"
+        android:text="Turma da Galinha Pintadinha"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgPerfil"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.506" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:text="Avalie o jogo de 1 a 10 de acordo com os itens a seguir:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgPerfil" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="420dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/abril_fatface"
+                android:text="A interface e o controle do jogo são de fácil utilização?"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="18sp" />
+
+            <RatingBar
+                android:id="@+id/ratingBar1"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:numStars="10"
+                android:stepSize="1"
+                android:rating="0"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="2dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/abril_fatface"
+                android:text="Qual a capacidade do software estar disponível a qualquer momento?"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="18sp" />
+
+            <RatingBar
+                android:id="@+id/ratingBar2"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:numStars="10"
+                android:stepSize="1"
+                android:rating="0"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="2dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/abril_fatface"
+                android:text="Qual a capacidade de garantir a privacidade do usuário?"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="18sp" />
+
+            <RatingBar
+                android:id="@+id/ratingBar3"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:numStars="10"
+                android:stepSize="1"
+                android:rating="0"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="2dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/abril_fatface"
+                android:text="Qual o grau de facilidade de instalação do software?"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="18sp" />
+
+            <RatingBar
+                android:id="@+id/ratingBar4"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:numStars="10"
+                android:stepSize="1"
+                android:rating="0"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="2dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/abril_fatface"
+                android:text="O software facilitou sua aprendizagem?"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="18sp" />
+
+            <RatingBar
+                android:id="@+id/ratingBar5"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:numStars="10"
+                android:stepSize="1"
+                android:rating="0"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="2dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/abril_fatface"
+                android:text="Como avalia a inserção do jogo na escola para ajudar no aprendizado?"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="18sp" />
+
+            <RatingBar
+                android:id="@+id/ratingBar6"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:numStars="10"
+                android:stepSize="1"
+                android:rating="0"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="2dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/abril_fatface"
+                android:text="O jogo contribuiu para a colaboração e compartilhamento de conhecimentos entre os colegas de classe?"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="18sp"  />
+
+            <RatingBar
+                android:id="@+id/ratingBar7"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:numStars="10"
+                android:stepSize="1"
+                android:rating="0"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="2dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/abril_fatface"
+                android:text="O jogo é eficiente no aprendizado comparado com outras atividades como leitura, palestra ou pesquisa?"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="18sp" />
+
+            <RatingBar
+                android:id="@+id/ratingBar8"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:numStars="10"
+                android:stepSize="1"
+                android:rating="0"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="2dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/abril_fatface"
+                android:text="É fácil aprender como usar os recursos do jogo?"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="18sp" />
+
+            <RatingBar
+                android:id="@+id/ratingBar9"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:numStars="10"
+                android:stepSize="1"
+                android:rating="0"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="2dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/abril_fatface"
+                android:text="Os erros cometidos atrapalham a execução do jogo?"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="18sp"  />
+
+            <RatingBar
+                android:id="@+id/ratingBar10"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:numStars="10"
+                android:stepSize="1"
+                android:rating="0"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="2dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/abril_fatface"
+                android:text="Conseguiu fixar as regras do jogo?"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="18sp"  />
+
+            <RatingBar
+                android:id="@+id/ratingBar11"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:numStars="10"
+                android:stepSize="1"
+                android:rating="0"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="2dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/abril_fatface"
+                android:text="Dê uma nota para os elementos visuais do jogo (texto, cores, ícones)."
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="18sp" />
+
+            <RatingBar
+                android:id="@+id/ratingBar12"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:numStars="10"
+                android:stepSize="1"
+                android:rating="0"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="2dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/abril_fatface"
+                android:text="Qual foi seu grau de atenção no jogo?"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="18sp" />
+
+            <RatingBar
+                android:id="@+id/ratingBar13"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:numStars="10"
+                android:stepSize="1"
+                android:rating="0"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="2dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/abril_fatface"
+                android:text="Você sentiu confiança de aprendizagem ao ao passar pelos níveis do jogo?"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="18sp" />
+
+            <RatingBar
+                android:id="@+id/ratingBar14"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:numStars="10"
+                android:stepSize="1"
+                android:rating="0"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="2dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/abril_fatface"
+                android:text="Qual sua satisfação com seu desempenho no jogo?"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="18sp"  />
+
+            <RatingBar
+                android:id="@+id/ratingBar15"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:numStars="10"
+                android:stepSize="1"
+                android:rating="0"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="2dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/abril_fatface"
+                android:text="Qual a possibilidade de utilização prática dos conteúdos aprendidos no jogo?"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="18sp"  />
+
+            <RatingBar
+                android:id="@+id/ratingBar16"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:numStars="10"
+                android:stepSize="1"
+                android:rating="0"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="2dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/abril_fatface"
+                android:text="O jogo foi desafiador para você?"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="18sp"  />
+
+            <RatingBar
+                android:id="@+id/ratingBar17"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:numStars="10"
+                android:stepSize="1"
+                android:rating="0"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="2dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/abril_fatface"
+                android:text="O jogo foi compatível com seu nível de conteúdo?"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="18sp"  />
+
+            <RatingBar
+                android:id="@+id/ratingBar18"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:numStars="10"
+                android:stepSize="1"
+                android:rating="0"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="2dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/abril_fatface"
+                android:text="Você conseguiu atingir os objetivos do jogo com suas habilidades?"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="18sp" />
+
+            <RatingBar
+                android:id="@+id/ratingBar19"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:numStars="10"
+                android:stepSize="1"
+                android:rating="0"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="2dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/abril_fatface"
+                android:text="O jogo aperfeiçoou suas habilidades?"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="18sp"  />
+
+            <RatingBar
+                android:id="@+id/ratingBar20"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:numStars="10"
+                android:stepSize="1"
+                android:rating="0"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="2dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnVoltar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@drawable/botao"
+                    android:shadowColor="#5C5C5C"
+                    android:shadowDx="-5"
+                    android:shadowDy="0"
+                    android:shadowRadius="5"
+                    android:text="@string/voltar"
+                    android:textColor="#D3D6C9"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnSalvar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="32dp"
+                    android:background="@drawable/botao"
+                    android:shadowColor="#5C5C5C"
+                    android:shadowDx="-5"
+                    android:shadowDy="0"
+                    android:shadowRadius="5"
+                    android:text="Salvar"
+                    android:textColor="#D3D6C9"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">AVAL APP</string>
+    <string name="desc">imagem</string>
+    <string name="registrar">Registrar</string>
+    <string name="entrar">Entrar</string>
+    <string name="email">Email</string>
+    <string name="senha">Senha</string>
+    <string name="foto">Foto</string>
+    <string name="title_activity_perfil">Perfil</string>
+    <string name="nome">Nome</string>
+    <string name="telefone">Telefone</string>
+    <string name="cidade">Cidade</string>
+    <string name="estado">Estado</string>
+    <string name="confsenha">ConfSenha</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="voltar">Voltar</string>
+    <string name="logout">Logout</string>
+    <string name="title_activity_jogo">Jogo</string>
+</resources>

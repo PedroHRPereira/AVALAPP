@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "690133761311",
+    "firebase_url": "https://aplicativos-android-2b055.firebaseio.com",
+    "project_id": "aplicativos-android-2b055",
+    "storage_bucket": "aplicativos-android-2b055.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:690133761311:android:9834cd767ed804f9",
+        "android_client_info": {
+          "package_name": "com.example.eryck.avalapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "690133761311-4u69ivhhkm6fle8j2fcq5togg0h60r28.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.eryck.avalapp",
+            "certificate_hash": "3484a17aaf7ddbc49c057f455bd1f91b084fa094"
+          }
+        },
+        {
+          "client_id": "690133761311-gfe4utlmabnei1g1u4av8ei5au4fc8sb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCN4D8L3aIgCBDN5SbI9MOIYQCbjXWs2k"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "690133761311-gfe4utlmabnei1g1u4av8ei5au4fc8sb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

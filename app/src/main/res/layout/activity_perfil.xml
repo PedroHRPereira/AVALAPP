@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:gravity="center"
+    tools:context=".Activity.Perfil">
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imgPerfil"
+                android:layout_width="134dp"
+                android:layout_height="131dp"
+                android:layout_gravity="left"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="16dp"
+                android:contentDescription="@string/desc"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+
+            <TextView
+                android:id="@+id/txtNome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="16dp"
+                android:text="Nome:"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/txtEmail"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.022"
+                app:layout_constraintStart_toEndOf="@+id/imgPerfil"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="48dp"
+                android:text="Email: "
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.017"
+                app:layout_constraintStart_toEndOf="@+id/imgPerfil"
+                app:layout_constraintTop_toBottomOf="@+id/txtNome" />
+
+        </android.support.constraint.ConstraintLayout>
+
+
+        <TextView
+            android:id="@+id/txtAvalie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="Avalie Agora:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <HorizontalScrollView
+            android:id="@+id/scrvAvalie"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_marginTop="8dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <Button
+                    android:id="@+id/btnJogo1"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/jogo1"
+                    android:contentDescription="@string/desc"
+                    android:textAlignment="center" />
+
+                <Button
+                    android:id="@+id/btnJogo2"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/jogo2"
+                    android:contentDescription="@string/desc" />
+
+                <Button
+                    android:id="@+id/btnJogo3"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/jogo3"
+                    android:contentDescription="@string/desc" />
+
+                <Button
+                    android:id="@+id/btnJogo4"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/jogo4"
+                    android:contentDescription="@string/desc" />
+
+                <Button
+                    android:id="@+id/btnJogo5"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/jogo5"
+                    android:contentDescription="@string/desc" />
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="Ranking Geral:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <HorizontalScrollView
+            android:id="@+id/scrvRanking"
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:fillViewport="false">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+
+                <Button
+                    android:id="@+id/btnRanking1"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="32dp"
+                    android:background="@drawable/jogo1"
+                    android:contentDescription="@string/desc"
+                    android:textAlignment="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/btnRanking2"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+
+                <TextView
+                    android:id="@+id/txtRanking1"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="36dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="72dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/botao_aval"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center"
+                    android:shadowColor="#3DB9CC"
+                    android:shadowDx="-5"
+                    android:shadowDy="0"
+                    android:shadowRadius="5"
+                    android:text=""
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/txtRanking2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btnRanking1" />
+
+                <Button
+                    android:id="@+id/btnRanking2"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="32dp"
+                    android:background="@drawable/jogo2"
+                    android:contentDescription="@string/desc"
+                    app:layout_constraintEnd_toStartOf="@+id/btnRanking3"
+                    app:layout_constraintStart_toEndOf="@+id/btnRanking1"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txtRanking2"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/botao_aval"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center"
+                    android:shadowColor="#3DB9CC"
+                    android:shadowDx="-5"
+                    android:shadowDy="0"
+                    android:shadowRadius="5"
+                    android:text=""
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/txtRanking3"
+                    app:layout_constraintStart_toEndOf="@+id/txtRanking1"
+                    app:layout_constraintTop_toBottomOf="@+id/btnRanking2" />
+
+                <Button
+                    android:id="@+id/btnRanking3"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="32dp"
+                    android:background="@drawable/jogo3"
+                    android:contentDescription="@string/desc"
+                    app:layout_constraintEnd_toStartOf="@+id/btnRanking4"
+                    app:layout_constraintStart_toEndOf="@+id/btnRanking2"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txtRanking3"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="72dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="72dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/botao_aval"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center"
+                    android:shadowColor="#3DB9CC"
+                    android:shadowDx="-5"
+                    android:shadowDy="0"
+                    android:shadowRadius="5"
+                    android:text=""
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/txtRanking4"
+                    app:layout_constraintStart_toEndOf="@+id/txtRanking2"
+                    app:layout_constraintTop_toBottomOf="@+id/btnRanking3" />
+
+                <Button
+                    android:id="@+id/btnRanking4"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="32dp"
+                    android:background="@drawable/jogo4"
+                    android:contentDescription="@string/desc"
+                    app:layout_constraintEnd_toStartOf="@+id/btnRanking5"
+                    app:layout_constraintStart_toEndOf="@+id/btnRanking3"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txtRanking4"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/botao_aval"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center"
+                    android:shadowColor="#3DB9CC"
+                    android:shadowDx="-5"
+                    android:shadowDy="0"
+                    android:shadowRadius="5"
+                    android:text=""
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/txtRanking5"
+                    app:layout_constraintStart_toEndOf="@+id/txtRanking3"
+                    app:layout_constraintTop_toBottomOf="@+id/btnRanking4" />
+
+                <Button
+                    android:id="@+id/btnRanking5"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/jogo5"
+                    android:contentDescription="@string/desc"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/btnRanking4"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txtRanking5"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="72dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/botao_aval"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center"
+                    android:shadowColor="#3DB9CC"
+                    android:shadowDx="-5"
+                    android:shadowDy="0"
+                    android:shadowRadius="5"
+                    android:text=""
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/txtRanking4"
+                    app:layout_constraintTop_toBottomOf="@+id/btnRanking5" />
+
+                <android.support.constraint.Guideline
+                    android:id="@+id/gdLinha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_begin="20dp" />
+
+            </android.support.constraint.ConstraintLayout>
+
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/txtAvaliado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="Avaliados por Você:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <HorizontalScrollView
+            android:id="@+id/scrvAvaliados"
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:fillViewport="false">
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+
+                <Button
+                    android:id="@+id/btnaval1"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/jogo1"
+                    android:contentDescription="@string/desc"
+                    android:textAlignment="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+
+                <TextView
+                    android:id="@+id/txtNota1"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="36dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="72dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/botao_aval"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center"
+                    android:shadowColor="#3DB9CC"
+                    android:shadowDx="-5"
+                    android:shadowDy="0"
+                    android:shadowRadius="5"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/txtNota2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btnaval1" />
+
+                <Button
+                    android:id="@+id/btnaval2"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/jogo2"
+                    android:contentDescription="@string/desc"
+                    app:layout_constraintStart_toEndOf="@+id/btnaval1"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txtNota2"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/botao_aval"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center"
+                    android:shadowColor="#3DB9CC"
+                    android:shadowDx="-5"
+                    android:shadowDy="0"
+                    android:shadowRadius="5"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/txtNota3"
+                    app:layout_constraintStart_toEndOf="@+id/txtNota1"
+                    app:layout_constraintTop_toBottomOf="@+id/btnaval2" />
+
+                <Button
+                    android:id="@+id/btnaval3"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/jogo3"
+                    android:contentDescription="@string/desc"
+                    app:layout_constraintStart_toEndOf="@+id/btnaval2"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txtNota3"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="72dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="72dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/botao_aval"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center"
+                    android:shadowColor="#3DB9CC"
+                    android:shadowDx="-5"
+                    android:shadowDy="0"
+                    android:shadowRadius="5"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/txtNota4"
+                    app:layout_constraintStart_toEndOf="@+id/txtNota2"
+                    app:layout_constraintTop_toBottomOf="@+id/btnaval3" />
+
+                <Button
+                    android:id="@+id/btnaval4"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/jogo4"
+                    android:contentDescription="@string/desc"
+                    app:layout_constraintStart_toEndOf="@+id/btnaval3"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txtNota4"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/botao_aval"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center"
+                    android:shadowColor="#3DB9CC"
+                    android:shadowDx="-5"
+                    android:shadowDy="0"
+                    android:shadowRadius="5"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/txtNota5"
+                    app:layout_constraintStart_toEndOf="@+id/txtNota3"
+                    app:layout_constraintTop_toBottomOf="@+id/btnaval4" />
+
+                <Button
+                    android:id="@+id/btnaval5"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/jogo5"
+                    android:contentDescription="@string/desc"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/btnaval4"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txtNota5"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="72dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/botao_aval"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center"
+                    android:shadowColor="#3DB9CC"
+                    android:shadowDx="-5"
+                    android:shadowDy="0"
+                    android:shadowRadius="5"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/txtNota4"
+                    app:layout_constraintTop_toBottomOf="@+id/btnaval5" />
+
+
+            </android.support.constraint.ConstraintLayout>
+
+        </HorizontalScrollView>
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="200dp"
+            android:layout_height="45dp"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="100dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/botao"
+            android:shadowColor="#5C5C5C"
+            android:shadowDx="-5"
+            android:shadowDy="0"
+            android:shadowRadius="5"
+            android:text="Sair"
+            android:textColor="#D3D6C9"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</ScrollView>

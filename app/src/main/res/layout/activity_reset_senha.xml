@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="top|center"
+    android:background="@drawable/background"
+    tools:context=".Activity.ResetSenha">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:gravity="top"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/txtReset"
+        android:layout_width="wrap_content"
+        android:layout_height="53dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="top"
+        android:text="Adicione o email para o qual será enviado um link para a mudança de senha!"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/editEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:textAlignment="viewStart"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnResetSenha"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/botao"
+        android:shadowColor="#5C5C5C"
+        android:shadowDx="-5"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:text="Enviar email"
+        android:textAllCaps="true"
+        android:textColor="#D3D6C9"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+
+</LinearLayout>
