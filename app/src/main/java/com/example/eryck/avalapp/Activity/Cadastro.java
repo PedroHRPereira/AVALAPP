@@ -48,7 +48,7 @@ public class Cadastro extends AppCompatActivity {
     private String downloadImagem;
     private Usuario usuario;
     private Uri imagemPerfil;
-    private static final int RC_PHOTO_PICKER =  1;
+    private static final int RC_PHOTO_PICKER = 1;
 
 
     @Override
@@ -65,7 +65,7 @@ public class Cadastro extends AppCompatActivity {
     }
 
     /*Função do Evento de Ação ao Clicar no Botão Registrar e Voltar
-    * Também ao evento de Carregamento da Imagem de Perfil*/
+     * Também ao evento de Carregamento da Imagem de Perfil*/
     private void eventoClick() {
         btnVoltar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -87,7 +87,13 @@ public class Cadastro extends AppCompatActivity {
                     usuario.setCidade(editCidade.getText().toString());
                     usuario.setEstado(editEstado.getText().toString());
                     usuario.setTelefone(editTelefone.getText().toString());
+                    usuario.setNota1("0");
+                    usuario.setNota2("0");
+                    usuario.setNota3("0");
+                    usuario.setNota4("0");
+                    usuario.setNota5("0");
 
+                    adcionaFoto();
                     criarUser();
 
                 } else {
@@ -111,7 +117,7 @@ public class Cadastro extends AppCompatActivity {
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == RC_PHOTO_PICKER && resultCode == RESULT_OK && data != null){
+        if (requestCode == RC_PHOTO_PICKER && resultCode == RESULT_OK && data != null) {
 
             imagemPerfil = data.getData();
             imgAddPerfil.setImageURI(imagemPerfil);
@@ -196,7 +202,7 @@ public class Cadastro extends AppCompatActivity {
         }
     }
 
-   /*Função de Criação de um novo usuário com email e senha pelo Authentication*/
+    /*Função de Criação de um novo usuário com email e senha pelo Authentication*/
     private void criarUser() {
         firebaseAuth = Conexao.getFirebaseAuth();
         firebaseAuth.createUserWithEmailAndPassword(usuario.getEmail(), usuario.getSenha())
@@ -218,7 +224,6 @@ public class Cadastro extends AppCompatActivity {
                             preferencias.salvarUsuarioPrefencias(identificadorUsuario, usuario.getNome());
 
                             atualizaNome();
-                            adcionaFoto();
 
                             Intent i = new Intent(Cadastro.this, Login.class);
                             startActivity(i);
@@ -248,14 +253,14 @@ public class Cadastro extends AppCompatActivity {
 
 
     // Funcão que atualiza o Nome do Usuário para o User Authentication
-    private void atualizaNome(){
+    private void atualizaNome() {
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
         UserProfileChangeRequest profileUpdates = new UserProfileChangeRequest.Builder()
                 .setDisplayName(editNome.getText().toString())
                 .build();
-        if(user != null) {
+        if (user != null) {
             user.updateProfile(profileUpdates)
                     .addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override

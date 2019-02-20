@@ -18,6 +18,8 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.text.DecimalFormat;
+
 
 public class Avaliacao extends AppCompatActivity {
 
@@ -84,7 +86,8 @@ public class Avaliacao extends AppCompatActivity {
                     // Instanciando o usuario por meio da autenticação
                     user = FirebaseAuth.getInstance().getCurrentUser();
                     usuario = new Usuario();
-                    String nota = String.format("%.1f", aval);
+                    DecimalFormat df = new DecimalFormat("0.#");
+                    Double nota = Double.valueOf(df.format(aval).replace(".", "").replace(",", "."));
                     usuario.setNota1("" + nota);
 
                     // Referencia ao banco de dados onde será salva a nota

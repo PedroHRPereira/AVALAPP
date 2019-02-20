@@ -104,7 +104,7 @@ public class Jogo4 extends AppCompatActivity {
                     }
 
                     // Faz o resgate de todas as notas atribuiadas ao jogo e as soma
-                    for(Usuario u : listaUsuarios) {
+                    for (Usuario u : listaUsuarios) {
                         soma += Double.parseDouble(u.getNota4());
                     }
 
@@ -130,6 +130,7 @@ public class Jogo4 extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(Jogo4.this, Avaliacao4.class);
                 startActivity(i);
+                finish();
             }
         });
     }

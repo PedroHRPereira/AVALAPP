@@ -46,18 +46,18 @@ public class ResetSenha extends AppCompatActivity {
 
     }
 
-    private void resetSenha(){
+    private void resetSenha() {
 
         firebaseAuth = Conexao.getFirebaseAuth();
         firebaseAuth.sendPasswordResetEmail(usuario.getEmail()).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
 
-                if (task.isSuccessful()){
+                if (task.isSuccessful()) {
 
                     alert("O Email foi encaminhado para que você altere sua senha! ");
 
-                }else{
+                } else {
                     alert("Email vazio, digite um email válido para a solicitação!");
                 }
             }
@@ -66,7 +66,7 @@ public class ResetSenha extends AppCompatActivity {
 
     private void alert(String s) {
 
-        Toast.makeText(ResetSenha.this,s,Toast.LENGTH_SHORT).show();
+        Toast.makeText(ResetSenha.this, s, Toast.LENGTH_SHORT).show();
     }
 
     private void inicializaFuncao() {

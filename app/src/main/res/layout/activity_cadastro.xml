@@ -141,7 +141,7 @@
             android:layout_marginBottom="8dp"
             android:background="@drawable/camera"
             android:contentDescription="@string/desc"
-            android:scaleType="fitCenter" />
+            android:scaleType="centerCrop" />
 
         <LinearLayout
 

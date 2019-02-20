@@ -51,21 +51,21 @@ public class Login extends AppCompatActivity {
         });
 
         btnEntrar.setOnClickListener(new View.OnClickListener() {
-         @Override
-         public void onClick(View v) {
+            @Override
+            public void onClick(View v) {
 
-             if (!editEmail.getText().toString().equals("") && !editSenha.getText().toString().equals("")){
+                if (!editEmail.getText().toString().equals("") && !editSenha.getText().toString().equals("")) {
 
                     usuario = new Usuario();
                     usuario.setEmail(editEmail.getText().toString());
                     usuario.setSenha(editSenha.getText().toString());
                     validarLogin();
 
-             }else{
-                 alert("Preencha os campos e-mail e senha!");
-             }
-                  }
-     });
+                } else {
+                    alert("Preencha os campos e-mail e senha!");
+                }
+            }
+        });
 
         txtResetSenha.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,12 +75,12 @@ public class Login extends AppCompatActivity {
             }
         });
 
-      }
+    }
 
     private void validarLogin() {
 
         firebaseAuth = Conexao.getFirebaseAuth();
-        firebaseAuth.signInWithEmailAndPassword(usuario.getEmail(),usuario.getSenha()).addOnCompleteListener(Login.this, new OnCompleteListener<AuthResult>() {
+        firebaseAuth.signInWithEmailAndPassword(usuario.getEmail(), usuario.getSenha()).addOnCompleteListener(Login.this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
@@ -97,11 +97,11 @@ public class Login extends AppCompatActivity {
     }
 
     private void alert(String s) {
-        Toast.makeText(Login.this,s,Toast.LENGTH_SHORT).show();
+        Toast.makeText(Login.this, s, Toast.LENGTH_SHORT).show();
     }
 
     /* Inicia as funções dos botões como instancias*/
-    private void inicializaFuncao(){
+    private void inicializaFuncao() {
 
         editEmail = (EditText) findViewById(R.id.editEmail);
         editSenha = (EditText) findViewById(R.id.editSenha);
@@ -111,4 +111,4 @@ public class Login extends AppCompatActivity {
 
     }
 
-    }
+}

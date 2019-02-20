@@ -22,12 +22,11 @@ public class Usuario {
     private String nota5;
 
 
-
-    public Usuario(){
+    public Usuario() {
 
     }
 
-    public void salvar(){
+    public void salvar() {
 
         DatabaseReference databaseReference = Conexao.getFirebase();
         databaseReference.child("Usuario").child(String.valueOf(getId())).setValue(this);
@@ -35,7 +34,7 @@ public class Usuario {
 
     @Exclude
 
-    public Map<String, Object> toMap(){
+    public Map<String, Object> toMap() {
         HashMap<String, Object> hashMapUsuario = new HashMap<>();
 
         hashMapUsuario.put("id", getId());
@@ -45,6 +44,11 @@ public class Usuario {
         hashMapUsuario.put("telefone", getTelefone());
         hashMapUsuario.put("cidade", getCidade());
         hashMapUsuario.put("estado", getEstado());
+        hashMapUsuario.put("nota1", getNota1());
+        hashMapUsuario.put("nota2", getNota2());
+        hashMapUsuario.put("nota3", getNota3());
+        hashMapUsuario.put("nota4", getNota4());
+        hashMapUsuario.put("nota5", getNota5());
 
         return hashMapUsuario;
 

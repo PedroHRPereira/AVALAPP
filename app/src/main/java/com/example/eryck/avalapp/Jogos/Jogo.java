@@ -75,8 +75,8 @@ public class Jogo extends AppCompatActivity {
                     }
 
                     // Faz o resgate de todas as notas atribuiadas ao jogo e as soma
-                    for(Usuario u : listaUsuarios) {
-                        soma += Double.parseDouble(u.getNota1());
+                    for (Usuario u : listaUsuarios) {
+                        soma += Double.valueOf(u.getNota1());
                     }
 
                     // Cálculo da média das notas atribuidas ao jogo
@@ -129,6 +129,7 @@ public class Jogo extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(Jogo.this, Avaliacao.class);
                 startActivity(i);
+                finish();
             }
         });
     }

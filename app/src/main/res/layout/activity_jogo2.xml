@@ -174,7 +174,7 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="32dp"
                 android:background="@drawable/botao_aval"
-                android:gravity="center_vertical"
+                android:gravity="center"
                 android:shadowColor="#3DB9CC"
                 android:shadowDx="-5"
                 android:shadowDy="0"

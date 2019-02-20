@@ -29,6 +29,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 
 public class Perfil extends AppCompatActivity {
@@ -119,44 +120,59 @@ public class Perfil extends AppCompatActivity {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                     // Inicia a soma e a média das notas em 0
-                    soma1 = 0.0; soma2 = 0.0; soma3 = 0.0; soma4 = 0.0; soma5 = 0.0;
-                    media1 = 0.0; media2 = 0.0; media3 = 0.0; media4 = 0.0; media5 = 0.0;
+                    soma1 = 0.0;
+                    soma2 = 0.0;
+                    soma3 = 0.0;
+                    soma4 = 0.0;
+                    soma5 = 0.0;
+                    media1 = 0.0;
+                    media2 = 0.0;
+                    media3 = 0.0;
+                    media4 = 0.0;
+                    media5 = 0.0;
 
-                    // Gera um contador onde as notas dos usuarios serão resgatadas
-                    for (DataSnapshot objSnapshot : dataSnapshot.getChildren()) {
-                        Usuario u = objSnapshot.getValue(Usuario.class);
-                        listaUsuarios.add(u);
+                    if (dataSnapshot.exists()) {
+                        // Gera um contador onde as notas dos usuarios serão resgatadas
+                        for (DataSnapshot objSnapshot : dataSnapshot.getChildren()) {
+                            Usuario u = objSnapshot.getValue(Usuario.class);
+                            listaUsuarios.add(u);
+                        }
+
+                        // Faz o resgate de todas as notas atribuiadas ao jogo e as soma
+                        for (Usuario u : listaUsuarios) {
+                            soma1 += Double.valueOf(u.getNota1());
+                            soma2 += Double.valueOf(u.getNota2());
+                            soma3 += Double.valueOf(u.getNota3());
+                            soma4 += Double.valueOf(u.getNota4());
+                            soma5 += Double.valueOf(u.getNota5());
+
+                        }
+
+                        // Cálculo da média das notas atribuidas aos jogos
+                        media1 = soma1 / listaUsuarios.size();
+                        String txt1 = String.format(new Locale("pt", "BR"), "%.1f", media1);
+                        txtRanking1.setText(txt1);
+
+                        media2 = soma2 / listaUsuarios.size();
+                        String txt2 = String.format(new Locale("pt", "BR"), "%.1f", media2);
+                        txtRanking2.setText(txt2);
+
+                        media3 = soma3 / listaUsuarios.size();
+                        String txt3 = String.format(new Locale("pt", "BR"), "%.1f", media3);
+                        txtRanking3.setText(txt3);
+
+                        media4 = soma4 / listaUsuarios.size();
+                        String txt4 = String.format(new Locale("pt", "BR"), "%.1f", media4);
+                        txtRanking4.setText(txt4);
+
+                        media5 = soma5 / listaUsuarios.size();
+                        String txt5 = String.format(new Locale("pt", "BR"), "%.1f", media5);
+                        txtRanking5.setText(txt5);
+
+                    } else {
+
+                        alert("Erro ao acessar o Banco de Dados, tente novamente!");
                     }
-
-                    // Faz o resgate de todas as notas atribuiadas ao jogo e as soma
-                    for (Usuario u : listaUsuarios) {
-                        soma1 += Double.parseDouble(u.getNota1());
-                        soma2 += Double.parseDouble(u.getNota2());
-                        soma3 += Double.parseDouble(u.getNota3());
-                        soma4 += Double.parseDouble(u.getNota4());
-                        soma5 += Double.parseDouble(u.getNota5());
-                    }
-
-                    // Cálculo da média das notas atribuidas aos jogos
-                    media1 = soma1 / listaUsuarios.size();
-                    String txt1 = String.format("%.1f", media1);
-                    txtRanking1.setText(txt1);
-
-                    media2 = soma2 / listaUsuarios.size();
-                    String txt2 = String.format("%.1f", media2);
-                    txtRanking2.setText(txt2);
-
-                    media3 = soma3 / listaUsuarios.size();
-                    String txt3 = String.format("%.1f", media3);
-                    txtRanking3.setText(txt3);
-
-                    media4 = soma4 / listaUsuarios.size();
-                    String txt4 = String.format("%.1f", media4);
-                    txtRanking4.setText(txt4);
-
-                    media5 = soma5 / listaUsuarios.size();
-                    String txt5 = String.format("%.1f", media5);
-                    txtRanking5.setText(txt5);
                 }
 
                 @Override
@@ -175,13 +191,14 @@ public class Perfil extends AppCompatActivity {
             public void onClick(View v) {
 
                 String Ativo = txtNota1.getText().toString().trim();
-                if (!Ativo.isEmpty()){
+                if (!Ativo.equals("0")) {
                     btnJogo1.setEnabled(false);
                     alert("Você já avaliou este jogo! Tente outro.");
 
-                }else{
+                } else {
                     Intent i = new Intent(Perfil.this, Jogo.class);
                     startActivity(i);
+                    finish();
                 }
 
             }
@@ -192,13 +209,14 @@ public class Perfil extends AppCompatActivity {
             public void onClick(View v) {
 
                 String Ativo = txtNota1.getText().toString().trim();
-                if (!Ativo.isEmpty()){
+                if (!Ativo.equals("0")) {
                     btnRanking1.setEnabled(false);
                     alert("Você já avaliou este jogo! Tente outro.");
 
-                }else{
+                } else {
                     Intent i = new Intent(Perfil.this, Jogo.class);
                     startActivity(i);
+                    finish();
                 }
             }
         });
@@ -208,13 +226,14 @@ public class Perfil extends AppCompatActivity {
             public void onClick(View v) {
 
                 String Ativo = txtNota1.getText().toString().trim();
-                if (!Ativo.isEmpty()){
+                if (!Ativo.equals("0")) {
                     btnAval1.setEnabled(false);
                     alert("Você já avaliou este jogo! Tente outro.");
 
-                }else{
+                } else {
                     Intent i = new Intent(Perfil.this, Jogo.class);
                     startActivity(i);
+                    finish();
                 }
             }
         });
@@ -225,13 +244,14 @@ public class Perfil extends AppCompatActivity {
             public void onClick(View v) {
 
                 String Ativo = txtNota2.getText().toString().trim();
-                if (!Ativo.isEmpty()){
+                if (!Ativo.equals("0")) {
                     btnJogo2.setEnabled(false);
                     alert("Você já avaliou este jogo! Tente outro.");
 
-                }else{
-                    Intent i = new Intent(Perfil.this, Jogo.class);
+                } else {
+                    Intent i = new Intent(Perfil.this, Jogo2.class);
                     startActivity(i);
+                    finish();
                 }
             }
         });
@@ -241,13 +261,14 @@ public class Perfil extends AppCompatActivity {
             public void onClick(View v) {
 
                 String Ativo = txtNota2.getText().toString().trim();
-                if (!Ativo.isEmpty()){
+                if (!Ativo.equals("0")) {
                     btnRanking2.setEnabled(false);
                     alert("Você já avaliou este jogo! Tente outro.");
 
-                }else{
-                    Intent i = new Intent(Perfil.this, Jogo.class);
+                } else {
+                    Intent i = new Intent(Perfil.this, Jogo2.class);
                     startActivity(i);
+                    finish();
                 }
             }
         });
@@ -256,13 +277,14 @@ public class Perfil extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String Ativo = txtNota2.getText().toString().trim();
-                if (!Ativo.isEmpty()){
+                if (!Ativo.equals("0")) {
                     btnAval2.setEnabled(false);
                     alert("Você já avaliou este jogo! Tente outro.");
 
-                }else{
-                    Intent i = new Intent(Perfil.this, Jogo.class);
+                } else {
+                    Intent i = new Intent(Perfil.this, Jogo2.class);
                     startActivity(i);
+                    finish();
                 }
             }
         });
@@ -273,13 +295,14 @@ public class Perfil extends AppCompatActivity {
             public void onClick(View v) {
 
                 String Ativo = txtNota3.getText().toString().trim();
-                if (!Ativo.isEmpty()){
+                if (!Ativo.equals("0")) {
                     btnJogo3.setEnabled(false);
                     alert("Você já avaliou este jogo! Tente outro.");
 
-                }else{
-                    Intent i = new Intent(Perfil.this, Jogo.class);
+                } else {
+                    Intent i = new Intent(Perfil.this, Jogo3.class);
                     startActivity(i);
+                    finish();
                 }
             }
         });
@@ -289,13 +312,14 @@ public class Perfil extends AppCompatActivity {
             public void onClick(View v) {
 
                 String Ativo = txtNota3.getText().toString().trim();
-                if (!Ativo.isEmpty()){
+                if (!Ativo.equals("0")) {
                     btnRanking3.setEnabled(false);
                     alert("Você já avaliou este jogo! Tente outro.");
 
-                }else{
-                    Intent i = new Intent(Perfil.this, Jogo.class);
+                } else {
+                    Intent i = new Intent(Perfil.this, Jogo3.class);
                     startActivity(i);
+                    finish();
                 }
             }
         });
@@ -304,13 +328,14 @@ public class Perfil extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String Ativo = txtNota3.getText().toString().trim();
-                if (!Ativo.isEmpty()){
+                if (!Ativo.equals("0")) {
                     btnAval3.setEnabled(false);
                     alert("Você já avaliou este jogo! Tente outro.");
 
-                }else{
-                    Intent i = new Intent(Perfil.this, Jogo.class);
+                } else {
+                    Intent i = new Intent(Perfil.this, Jogo3.class);
                     startActivity(i);
+                    finish();
                 }
             }
         });
@@ -321,13 +346,14 @@ public class Perfil extends AppCompatActivity {
             public void onClick(View v) {
 
                 String Ativo = txtNota4.getText().toString().trim();
-                if (!Ativo.isEmpty()){
+                if (!Ativo.equals("0")) {
                     btnJogo4.setEnabled(false);
                     alert("Você já avaliou este jogo! Tente outro.");
 
-                }else{
-                    Intent i = new Intent(Perfil.this, Jogo.class);
+                } else {
+                    Intent i = new Intent(Perfil.this, Jogo4.class);
                     startActivity(i);
+                    finish();
                 }
             }
         });
@@ -337,13 +363,14 @@ public class Perfil extends AppCompatActivity {
             public void onClick(View v) {
 
                 String Ativo = txtNota4.getText().toString().trim();
-                if (!Ativo.isEmpty()){
+                if (!Ativo.equals("0")) {
                     btnRanking4.setEnabled(false);
                     alert("Você já avaliou este jogo! Tente outro.");
 
-                }else{
-                    Intent i = new Intent(Perfil.this, Jogo.class);
+                } else {
+                    Intent i = new Intent(Perfil.this, Jogo4.class);
                     startActivity(i);
+                    finish();
                 }
             }
         });
@@ -352,13 +379,14 @@ public class Perfil extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String Ativo = txtNota4.getText().toString().trim();
-                if (!Ativo.isEmpty()){
+                if (!Ativo.equals("0")) {
                     btnAval4.setEnabled(false);
                     alert("Você já avaliou este jogo! Tente outro.");
 
-                }else{
-                    Intent i = new Intent(Perfil.this, Jogo.class);
+                } else {
+                    Intent i = new Intent(Perfil.this, Jogo4.class);
                     startActivity(i);
+                    finish();
                 }
             }
         });
@@ -369,13 +397,14 @@ public class Perfil extends AppCompatActivity {
             public void onClick(View v) {
 
                 String Ativo = txtNota5.getText().toString().trim();
-                if (!Ativo.isEmpty()){
+                if (!Ativo.equals("0")) {
                     btnJogo5.setEnabled(false);
                     alert("Você já avaliou este jogo! Tente outro.");
 
-                }else{
-                    Intent i = new Intent(Perfil.this, Jogo.class);
+                } else {
+                    Intent i = new Intent(Perfil.this, Jogo5.class);
                     startActivity(i);
+                    finish();
                 }
             }
         });
@@ -385,13 +414,14 @@ public class Perfil extends AppCompatActivity {
             public void onClick(View v) {
 
                 String Ativo = txtNota5.getText().toString().trim();
-                if (!Ativo.isEmpty()){
+                if (!Ativo.equals("0")) {
                     btnRanking5.setEnabled(false);
                     alert("Você já avaliou este jogo! Tente outro.");
 
-                }else{
-                    Intent i = new Intent(Perfil.this, Jogo.class);
+                } else {
+                    Intent i = new Intent(Perfil.this, Jogo5.class);
                     startActivity(i);
+                    finish();
                 }
             }
         });
@@ -401,13 +431,14 @@ public class Perfil extends AppCompatActivity {
             public void onClick(View v) {
 
                 String Ativo = txtNota5.getText().toString().trim();
-                if (!Ativo.isEmpty()){
+                if (!Ativo.equals("0")) {
                     btnAval5.setEnabled(false);
                     alert("Você já avaliou este jogo! Tente outro.");
 
-                }else{
-                    Intent i = new Intent(Perfil.this, Jogo.class);
+                } else {
+                    Intent i = new Intent(Perfil.this, Jogo5.class);
                     startActivity(i);
+                    finish();
                 }
             }
         });
