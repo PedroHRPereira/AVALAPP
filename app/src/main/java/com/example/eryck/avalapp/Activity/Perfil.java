@@ -150,23 +150,23 @@ public class Perfil extends AppCompatActivity {
 
                         // Cálculo da média das notas atribuidas aos jogos
                         media1 = soma1 / listaUsuarios.size();
-                        String txt1 = String.format(new Locale("pt", "BR"), "%.1f", media1);
+                        String txt1 = String.valueOf(media1);
                         txtRanking1.setText(txt1);
 
                         media2 = soma2 / listaUsuarios.size();
-                        String txt2 = String.format(new Locale("pt", "BR"), "%.1f", media2);
+                        String txt2 = String.valueOf(media2);
                         txtRanking2.setText(txt2);
 
                         media3 = soma3 / listaUsuarios.size();
-                        String txt3 = String.format(new Locale("pt", "BR"), "%.1f", media3);
+                        String txt3 = String.valueOf(media3);
                         txtRanking3.setText(txt3);
 
                         media4 = soma4 / listaUsuarios.size();
-                        String txt4 = String.format(new Locale("pt", "BR"), "%.1f", media4);
+                        String txt4 = String.valueOf(media4);
                         txtRanking4.setText(txt4);
 
                         media5 = soma5 / listaUsuarios.size();
-                        String txt5 = String.format(new Locale("pt", "BR"), "%.1f", media5);
+                        String txt5 = String.valueOf(media5);
                         txtRanking5.setText(txt5);
 
                     } else {

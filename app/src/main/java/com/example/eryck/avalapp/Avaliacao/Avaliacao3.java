@@ -74,12 +74,12 @@ public class Avaliacao3 extends AppCompatActivity {
                 } else {
 
                     // M[étodo para geração da nota do jogo
-                    double peso = 1.5d;
+                    double peso = 1.5;
                     aval = ((ratingBar1.getRating() * peso + ratingBar2.getRating() * peso + ratingBar3.getRating() * peso + ratingBar4.getRating() * peso +
                             ratingBar5.getRating() * peso + ratingBar6.getRating() * peso + ratingBar7.getRating() * peso + ratingBar8.getRating() +
                             ratingBar9.getRating() + ratingBar10.getRating() + ratingBar11.getRating() + ratingBar12.getRating() +
                             ratingBar13.getRating() + ratingBar14.getRating() + ratingBar15.getRating() + ratingBar16.getRating() +
-                            ratingBar17.getRating() + ratingBar18.getRating() + ratingBar19.getRating() + ratingBar20.getRating()) / 23.5d);
+                            ratingBar17.getRating() + ratingBar18.getRating() + ratingBar19.getRating() + ratingBar20.getRating()) / 23.5);
 
                     // Instanciando o usuario por meio da autenticação
                     user = FirebaseAuth.getInstance().getCurrentUser();
@@ -90,7 +90,7 @@ public class Avaliacao3 extends AppCompatActivity {
 
                     // Referencia ao banco de dados onde será salva a nota
                     DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
-                    databaseReference.child("Usuario").child(user.getUid()).child("nota1").setValue(usuario.getNota3());
+                    databaseReference.child("Usuario").child(user.getUid()).child("nota3").setValue(usuario.getNota3());
 
                     Intent i = new Intent(Avaliacao3.this, Perfil.class);
                     startActivity(i);

@@ -109,7 +109,7 @@ public class Jogo2 extends AppCompatActivity {
 
                     // Cálculo da média das notas atribuidas ao jogo
                     media = soma / listaUsuarios.size();
-                    String txt = String.format("%.1f", media);
+                    String txt = String.valueOf(media);
                     txtAvaliado.setText(txt);
                 }
 
