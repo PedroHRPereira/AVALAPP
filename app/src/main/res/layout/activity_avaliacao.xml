@@ -41,9 +41,9 @@
                 android:layout_width="189dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="28dp"
+                android:layout_marginTop="32dp"
                 android:layout_marginEnd="32dp"
-                android:layout_marginBottom="16dp"
+                android:layout_marginBottom="32dp"
                 android:text="Baby Blocks"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -67,18 +67,14 @@
             android:layout_marginBottom="16dp"
             android:text="Avalie o jogo de 1 a 10 de acordo com os itens a seguir:"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/scrollView"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imgPerfil" />
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:fontFamily="@font/abril_fatface"
-            android:text="A interface e o controle do jogo são de fácil utilização?"
+            android:text="É fácil utilizar a interface e o controle do jogo?"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textSize="18sp" />
 
@@ -98,7 +94,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:fontFamily="@font/abril_fatface"
-            android:text="Qual a capacidade do software estar disponível a qualquer momento?"
+            android:text="Qual a capacidade do software estar disponível a qualquer instante de tempo?"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textSize="18sp" />
 
@@ -140,7 +136,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:fontFamily="@font/abril_fatface"
-            android:text="Qual o grau de facilidade de instalação do software?"
+            android:text="É fácil a instalação do software?"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textSize="18sp" />
 
@@ -308,7 +304,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:fontFamily="@font/abril_fatface"
-            android:text="Dê uma nota para os elementos visuais do jogo (texto, cores, ícones)."
+            android:text="Dê uma nota para aparência, disposição dos elementos na tela do jogo incluindo texto, cores, ícones, gráficos."
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textSize="18sp" />
 
@@ -349,7 +345,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:fontFamily="@font/abril_fatface"
-            android:text="Você sentiu confiança de aprendizagem ao ao passar pelos níveis do jogo?"
+            android:text="Ao passar pelas etapas do jogo, você sentiu confiança do que estava aprendendo?"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textSize="18sp" />
 
@@ -369,7 +365,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:fontFamily="@font/abril_fatface"
-            android:text="Qual sua satisfação com seu desempenho no jogo?"
+            android:text="Você ficou satisfeito com seu desempenho no jogo?"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textSize="18sp" />
 
@@ -389,7 +385,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:fontFamily="@font/abril_fatface"
-            android:text="Qual a possibilidade de utilização prática dos conteúdos aprendidos no jogo?"
+            android:text="Você acha que utilizará na prática coisa que aprendeu durante o jogo?"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textSize="18sp" />
 
@@ -409,7 +405,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:fontFamily="@font/abril_fatface"
-            android:text="O jogo foi desafiador para você?"
+            android:text="O jogo foi desafiador para você? Ou seja, nem muito fácil e nem muito difícil. "
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textSize="18sp" />
 
@@ -449,7 +445,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:fontFamily="@font/abril_fatface"
-            android:text="Você conseguiu atingir os objetivos do jogo com suas habilidades?"
+            android:text="Você conseguiu atingir os objetivos do jogo com suas habilidades e habilidades dos seus companheiros?"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textSize="18sp" />
 
