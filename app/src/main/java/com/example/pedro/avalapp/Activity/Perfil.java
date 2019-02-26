@@ -27,6 +27,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -148,25 +149,26 @@ public class Perfil extends AppCompatActivity {
 
                         }
 
+                        DecimalFormat df = new DecimalFormat("0.0");
                         // Cálculo da média das notas atribuidas aos jogos
                         media1 = soma1 / listaUsuarios.size();
-                        String txt1 = String.valueOf(media1);
+                        String txt1 = String.valueOf(df.format(media1).replace(".", "").replace(",", "."));
                         txtRanking1.setText(txt1);
 
                         media2 = soma2 / listaUsuarios.size();
-                        String txt2 = String.valueOf(media2);
+                        String txt2 = String.valueOf(df.format(media2).replace(".", "").replace(",", "."));
                         txtRanking2.setText(txt2);
 
                         media3 = soma3 / listaUsuarios.size();
-                        String txt3 = String.valueOf(media3);
+                        String txt3 = String.valueOf(df.format(media3).replace(".", "").replace(",", "."));
                         txtRanking3.setText(txt3);
 
                         media4 = soma4 / listaUsuarios.size();
-                        String txt4 = String.valueOf(media4);
+                        String txt4 = String.valueOf(df.format(media4).replace(".", "").replace(",", "."));
                         txtRanking4.setText(txt4);
 
                         media5 = soma5 / listaUsuarios.size();
-                        String txt5 = String.valueOf(media5);
+                        String txt5 = String.valueOf(df.format(media5).replace(".", "").replace(",", "."));
                         txtRanking5.setText(txt5);
 
                     } else {

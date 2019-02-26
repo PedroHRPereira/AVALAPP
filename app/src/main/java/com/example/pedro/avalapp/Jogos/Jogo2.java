@@ -1,5 +1,6 @@
 package com.example.pedro.avalapp.Jogos;
 
+import com.example.pedro.avalapp.Activity.Perfil;
 import com.example.pedro.avalapp.Auxiliares.Conexao;
 import com.example.pedro.avalapp.Auxiliares.Usuario;
 import com.example.pedro.avalapp.Avaliacao.Avaliacao;
@@ -18,16 +19,19 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Jogo2 extends AppCompatActivity {
 
     private ImageButton btnClassificar;
+    private Button btnVoltar;
     private FirebaseAuth firebaseAuth;
     private TextView txtAvaliado, txtQtdUsuarios;
     private Double media, soma;
@@ -107,9 +111,11 @@ public class Jogo2 extends AppCompatActivity {
                         soma += Double.parseDouble(u.getNota2());
                     }
 
+                    DecimalFormat df = new DecimalFormat("0.0");
+
                     // Cálculo da média das notas atribuidas ao jogo
                     media = soma / listaUsuarios.size();
-                    String txt = String.valueOf(media);
+                    String txt = String.valueOf(df.format(media).replace(".", "").replace(",", "."));
                     txtAvaliado.setText(txt);
                 }
 
@@ -131,12 +137,22 @@ public class Jogo2 extends AppCompatActivity {
                 finish();
             }
         });
+
+        btnVoltar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Jogo2.this, Perfil.class);
+                startActivity(i);
+                finish();
+            }
+        });
     }
 
     //Classe Responsável por inicializar todos os componentes da Tela
     private void inicializaFuncao() {
 
         btnClassificar = (ImageButton) findViewById(R.id.btnClassificar);
+        btnVoltar = (Button) findViewById(R.id.btnVoltar);
         txtAvaliado = (TextView) findViewById(R.id.txtAvaliado);
         txtQtdUsuarios = (TextView) findViewById(R.id.txtQtdUsuarios);
 

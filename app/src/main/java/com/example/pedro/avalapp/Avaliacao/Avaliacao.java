@@ -78,10 +78,10 @@ public class Avaliacao extends AppCompatActivity {
                     double peso = 1.5;
 
                     aval = ((ratingBar1.getRating() * peso + ratingBar2.getRating() * peso + ratingBar3.getRating() * peso + ratingBar4.getRating() * peso +
-                            ratingBar5.getRating() * peso + ratingBar6.getRating() * peso + ratingBar7.getRating() * peso + ratingBar8.getRating() +
+                            ratingBar5.getRating() * peso + ratingBar6.getRating() * peso + ratingBar7.getRating() * peso + ratingBar8.getRating()*peso +
                             ratingBar9.getRating() + ratingBar10.getRating() + ratingBar11.getRating() + ratingBar12.getRating() +
                             ratingBar13.getRating() + ratingBar14.getRating() + ratingBar15.getRating() + ratingBar16.getRating() +
-                            ratingBar17.getRating() + ratingBar18.getRating() + ratingBar19.getRating() + ratingBar20.getRating()) / 23.5);
+                            ratingBar17.getRating() + ratingBar18.getRating() + ratingBar19.getRating() + ratingBar20.getRating()) / 24.0);
 
                     // Instanciando o usuario por meio da autenticação
                     user = FirebaseAuth.getInstance().getCurrentUser();
